@@ -5,8 +5,29 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        coolvetica: ['Coolvetica', 'sans-serif'],
+        roboto: ['Roboto', 'sans-serif'],
+        ubuntu: ['Ubuntu', 'san-serif'],
+        nocturne: ['Nocturne', 'san-serif']
+      },
+      screens: {
+        'ml': { 'raw': '(min-width: 1200px) and (max-height: 768px)' },
+        'ma': { 'raw': '(width: 1280px) and (height: 800px)' },
+      },
+      keyframes: {
+        fill: {
+          '0%, 100%': { fill: 'none' },
+          '50%': { fill: '#5f604b' },
+        },
+      },
+      animation: {
+        fill: 'fill 3s infinite',
+      },
+    },
   },
-  plugins: [],
+  plugins: [
+    require('daisyui'),
+  ],
 }
-
